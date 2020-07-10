@@ -8,7 +8,8 @@ const store = new Vuex.Store({
     login: false,
     token: '',
     Success: '',//用户完成和未完成量
-    noSuccess: ''
+    noSuccess: '',
+    addInfo: null
   },
   mutations: {
     modifyState(state, payload) {
@@ -20,6 +21,9 @@ const store = new Vuex.Store({
     modifyCounts(state, payload) {
       state.Success = payload.Success;
       state.noSuccess = payload.noSuccess;
+    },
+    Info(state, payload) {
+      state.addInfo = payload;
     }
   },
   actions: {

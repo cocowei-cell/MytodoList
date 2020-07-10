@@ -43,6 +43,7 @@ export default {
       this.newInfo._id = addInfo._id;
       // 调用子组件中的一个方法addAc 这里不知道为什么子组件监听不到变化
       this.$children[2].addAc();
+      this.newInfo = {};
       this.$children[1].empty();
     }
   },
