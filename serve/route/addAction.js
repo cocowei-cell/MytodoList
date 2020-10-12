@@ -5,8 +5,6 @@ module.exports = async (req, res) => {
   const { startTime, actions, token } = req.body;
   if (startTime && actions && token) {
     try {
-      console.log(req.body);
-      
       var { _id } = await checkToken(token);
       let addInfo = await Things1.create({ startTime, actions, user: _id });
       var original = await User.findById(_id);

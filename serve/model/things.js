@@ -10,7 +10,7 @@ const Things = new Schema({
   },
   actions: {
     type: String,
-    minlength: 2,
+    required: true,
     maxlength: 30
   },
   state: {
